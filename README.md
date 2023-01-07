@@ -1,1 +1,3 @@
-# ReactJs Clean Architecture TypeScript project
+# React app TypeScript Clean Architecture
+
+- this is dot
