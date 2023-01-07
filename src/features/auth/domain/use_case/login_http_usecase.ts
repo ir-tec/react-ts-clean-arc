@@ -3,7 +3,7 @@ import AuthRepository from "../repository/auth_repository";
 import { LoginInfoRepository } from "../repository/login_info_repository";
 
 export default interface LoginHttpUseCase {
-  invoke(): Promise<Token>;
+  invoke(): Promise<Token | Error>;
 }
 
 export class LoginHttpUseCaseImpl implements LoginHttpUseCase {

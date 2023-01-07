@@ -4,13 +4,17 @@ import { LoginInfoRepository } from "../../domain/repository/login_info_reposito
 import { LoginDataSource } from "./login/login_data_source";
 
 export class LoginDataSourceImpl implements LoginDataSource {
-  async login(loginInfo: LoginInfoRepository): Promise<Token> {
-    try {
-      const { data } = await http_instance.post("/test");
+  private _loginInfo: LoginInfoRepository;
+  constructor(loginInfo: LoginInfoRepository) {
+    this._loginInfo = loginInfo;
+  }
 
-      return { token: data };
+  async login() {
+    try {
+      const { data } = await http_instance.post("", this._loginInfo);
+      return data as Token;
     } catch (error) {
-      return { token: "asdasdas" };
+      throw Error(`${error}`);
     }
   }
 }
