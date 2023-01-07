@@ -3,4 +3,4 @@
 <h3>
  Simple implementation of Clean Architecture in react app without making ui
 </h3>
-<img src="https://miro.medium.com/max/880/1*O4pMWCi5kZi20SNOR6V33Q.png" alt="Clean Architecture presentation "/>
+<img src="https://cdn-media-1.freecodecamp.org/images/YsN6twE3-4Q4OYpgxoModmx29I8zthQ3f0OR" alt="Clean Architecture presentation "/>
