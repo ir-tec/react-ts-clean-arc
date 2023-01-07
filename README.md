@@ -1,3 +1,3 @@
-# React app TypeScript Clean Architecture
+# React TypeScript Clean Architecture
 
-- this is dot
+## Simple implementation of Clean Architecture in react app without making ui
