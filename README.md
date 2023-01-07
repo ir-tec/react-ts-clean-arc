@@ -18,6 +18,7 @@
 - React-dom 18.2.0
 - TypeScript 4.9.4
 - Mui 5.11.0
+- Axios 1.2.1
 
 #
 
