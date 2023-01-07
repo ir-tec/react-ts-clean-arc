@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect } from "react";
+import TodoListViewModel from "./features/todo/presentation/todo_list_view_model";
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  Checkbox,
+  ListItemText,
+} from "@mui/material";
 function App() {
+  const { getTodos, todos } = TodoListViewModel();
+
+  useEffect(() => {
+    getTodos();
+    // eslint-disable-next-line
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <List>
+      {todos.map((todo, i) => {
+        return (
+          <ListItem key={i}>
+            <ListItemIcon>
+              <Checkbox checked={todo.isComplete} />
+            </ListItemIcon>
+            <ListItemText primary={todo.title} />
+          </ListItem>
+        );
+      })}
+    </List>
   );
 }
 
