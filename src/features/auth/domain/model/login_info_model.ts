@@ -1,4 +1,4 @@
-export interface LoginInfoRepository {
+export interface LoginInfoModel {
   userName: string;
   password: string;
 }

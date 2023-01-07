@@ -7,11 +7,14 @@ import {
   Checkbox,
   ListItemText,
 } from "@mui/material";
+import useLogin from "./features/auth/presentation/useLogin";
 function App() {
   const { getTodos, todos } = TodoListViewModel();
+  const { login_post } = useLogin();
 
   useEffect(() => {
-    getTodos();
+    // getTodos();
+    login_post();
     // eslint-disable-next-line
   }, []);
 
