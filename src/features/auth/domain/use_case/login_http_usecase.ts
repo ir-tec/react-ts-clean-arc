@@ -1,6 +1,6 @@
-import { Token } from "../model/token_model";
+import { Token } from "../entities/token_model";
 import AuthRepository from "../repository/auth_repository";
-import { LoginInfoModel } from "../model/login_info_model";
+import { LoginInfoModel } from "../entities/login_info_model";
 
 export default interface LoginHttpUseCase {
   invoke(loginInfo: LoginInfoModel): Promise<Token | Error>;

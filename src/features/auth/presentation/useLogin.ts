@@ -1,7 +1,7 @@
 import React from "react";
 import { LoginDataSourceImpl } from "../data/data_source/auth_data_source_impl";
 import { AuthRepositoryImpl } from "../data/reposotory/auth_repository_impl";
-import { LoginInfoModel } from "../domain/model/login_info_model";
+import { LoginInfoModel } from "../domain/entities/login_info_model";
 import { LoginHttpUseCaseImpl } from "../domain/use_case/login_http_usecase";
 
 const useLogin = () => {

@@ -12,11 +12,11 @@ function App() {
   const { getTodos, todos } = TodoListViewModel();
   const { login_post } = useLogin();
 
-  useEffect(() => {
-    // getTodos();
-    login_post();
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   // getTodos();
+  //   login_post();
+  //   // eslint-disable-next-line
+  // }, []);
 
   return (
     <List>
